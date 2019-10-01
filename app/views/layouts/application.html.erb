@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>JoensuuTelegram</title>
+    <title>Joensuu-telegram</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,22 +10,8 @@
   </head>
 
   <body>
-    <div id="wrapper">
-    <%= render 'partial/navbar' if current_user %>
-    
-    <% if flash[:notice] %>
-      <div class="alert-info">
-        <%= flash[:notice] %>
-      </div>
-    <% end %>
-    <% if flash[:alert] %>
-      <div class="alert alert-danger">
-        <% flash[:alert] %>
-      </div>
-    <% end %>
-    
+
+    <%= render 'partial/navbar' %>
     <%= yield %>
-    <%= render 'partial/footer' %>
-    </div>
   </body>
 </html>
